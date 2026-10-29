@@ -1,0 +1,23 @@
+[project]
+name = "kafak-spark-snowflake-dbt"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "confluent-kafka",
+    "snowflake-connector-python[pandas]",
+    "python-dotenv",
+    "requests",
+    "pyspark==3.5.3",
+    "pandas",
+    "pyarrow",
+    "setuptools",
+    "dbt-snowflake",]
+
+[project.scripts]
+kafak-spark-snowflake-dbt = "kafak_spark_snowflake_dbt:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"

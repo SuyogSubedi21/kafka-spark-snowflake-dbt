@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw
+    database: financials
+    schema: raw
+    tables:
+      - name: spark_orders_clean
+      - name: spark_orders_rejected

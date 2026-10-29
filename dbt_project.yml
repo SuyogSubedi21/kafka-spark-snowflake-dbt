@@ -1,0 +1,15 @@
+name: orders_pipeline
+version: "1.0.0"
+profile: financials
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  orders_pipeline:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+    intermidiate:
+      +materialized: ephemeral
